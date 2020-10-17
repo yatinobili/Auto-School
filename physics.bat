@@ -1,0 +1,1 @@
+C:\Python\Python37\python.exe "C:\Users\Yatin\Documents\Discord Bot\New folder\physics.py" pause
