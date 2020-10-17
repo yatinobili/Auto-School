@@ -4,8 +4,14 @@ import keyboard
 import random
 import win32api, win32con
 import webbrowser
+import os
 
-url = 'https://meet.google.com/cnu-mfbq-wag'
+try:
+    global url
+    url = os.environ['PHYSICS_URL']
+except KeyError:
+    print("Environment variable 'PHYSICS_URL' is not set.")
+    quit()
 
 def click(x,y):
     win32api.SetCursorPos((x,y))
