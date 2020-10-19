@@ -3,8 +3,10 @@ import time
 import keyboard
 import win32api, win32con
 import webbrowser
+import os
 
-url = 'https://meet.google.com/cnu-mfbq-wag'
+global url
+url = os.environ['PHYSICS_URL']
 
 def click(x,y):
     win32api.SetCursorPos((x,y))
