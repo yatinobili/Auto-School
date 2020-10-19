@@ -5,8 +5,12 @@ import win32api, win32con
 import webbrowser
 import os
 
-global url
-url = os.environ['PHYSICS_URL']
+try:
+    global url
+    url = os.environ['PHYSICS_URL']
+except KeyError:
+    print("Environment variable 'PHYSICS_URL' is not set.")
+    quit()
 
 def click(x,y):
     win32api.SetCursorPos((x,y))
